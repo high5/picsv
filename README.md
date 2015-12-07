@@ -1,6 +1,6 @@
 # picsv
 
-convert pictures to svg animation with golang
+convert pictures to svg animation written in golang
 
 ## Usage
 ```
@@ -11,6 +11,10 @@ picsv -o output15.svg -first ./background/normal_1_1.png,./background/normal_1_2
 ```
 go get github.com/high5/picsv
 ```
+## sample
+
+![](https://raw.githubusercontent.com/high5/picsv/master/output15.svg)
+
 
 ## License
 
