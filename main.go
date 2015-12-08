@@ -19,19 +19,32 @@ import (
 )
 
 var (
-	output       = flag.String("o", "output_1.svg", "output filename")
-	firstLayer   = flag.String("l1", "", "svg layer")
-	firstRepeat  = flag.Int("r1", 0, "svg repeat. default indefinite")
-	firstDur     = flag.String("d1", "0", "svg duration. default 1")
-	firstBegin   = flag.String("b1", "0", "svg begin. default 0")
-	secondLayer  = flag.String("l2", "", "svg layer")
-	secondRepeat = flag.Int("r2", 0, "svg repeat. default indefinite")
-	secondDur    = flag.String("d2", "0", "svg duration. default pics count")
-	secondBegin  = flag.String("b2", "0", "svg begin. default 0")
-	thirdLayer   = flag.String("l3", "", "svg layer")
-	thirdRepeat  = flag.Int("r3", 0, "svg repeat. default indefinite")
-	thirdDur     = flag.String("d3", "0", "svg duration. default pics count")
-	thirdBegin   = flag.String("b3", "0", "svg begin. default 0")
+	output = flag.String("o", "output_1.svg", "output filename")
+
+	firstLayer  = flag.String("pics_1", "", "pictures")
+	firstRepeat = flag.Int("repeat_1", 0, "svg repeat. default indefinite")
+	firstDur    = flag.String("dur_1", "0", "svg duration. default 1")
+	firstBegin  = flag.String("begin_1", "0", "svg begin. default 0")
+
+	secondLayer  = flag.String("pics_2", "", "pictures")
+	secondRepeat = flag.Int("repeat_2", 0, "svg repeat. default indefinite")
+	secondDur    = flag.String("dur_2", "0", "svg duration. default pics count")
+	secondBegin  = flag.String("begin_2", "0", "svg begin. default 0")
+
+	thirdLayer  = flag.String("pics_3", "", "pictures")
+	thirdRepeat = flag.Int("repeat_3", 0, "svg repeat. default indefinite")
+	thirdDur    = flag.String("dur_3", "0", "svg duration. default pics count")
+	thirdBegin  = flag.String("begin_3", "0", "svg begin. default 0")
+
+	fourthLayer  = flag.String("pics_4", "", "pictures")
+	fourthRepeat = flag.Int("repeat_4", 0, "svg repeat. default indefinite")
+	fourthDur    = flag.String("dur_4", "0", "svg duration. default pics count")
+	fourthBegin  = flag.String("begin_4", "0", "svg begin. default 0")
+
+	fifthLayer  = flag.String("pics_5", "", "pictures")
+	fifthRepeat = flag.Int("repeat_5", 0, "svg repeat. default indefinite")
+	fifthDur    = flag.String("dur_5", "0", "svg duration. default pics count")
+	fifthBegin  = flag.String("begin_5", "0", "svg begin. default 0")
 )
 
 type Capturer struct {
@@ -151,10 +164,10 @@ func main() {
 	firstLayerList := strings.Split(*firstLayer, ",")
 	svgStartViewWidth, svgStartViewHeight := getImageSize(firstLayerList[0])
 
-	allLayer := []string{*firstLayer, *secondLayer, *thirdLayer}
-	allLayerRepeat := []int{*firstRepeat, *secondRepeat, *thirdRepeat}
-	allLayerDur := []string{*firstDur, *secondDur, *thirdDur}
-	allLayerBegin := []string{*firstBegin, *secondBegin, *thirdBegin}
+	allLayer := []string{*firstLayer, *secondLayer, *thirdLayer, *fourthLayer, *fifthLayer}
+	allLayerRepeat := []int{*firstRepeat, *secondRepeat, *thirdRepeat, *fourthRepeat, *fifthRepeat}
+	allLayerDur := []string{*firstDur, *secondDur, *thirdDur, *fourthDur, *fifthDur}
+	allLayerBegin := []string{*firstBegin, *secondBegin, *thirdBegin, *fourthBegin, *fifthBegin}
 
 	c := &Capturer{}
 	c.StartCapturingStdout()
