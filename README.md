@@ -4,7 +4,6 @@ Convert pictures to svg animation written in golang
 
 ## Usage
 
-sample
 ```
 picsv -o output.svg \
 -pics_1 background.gif \
@@ -22,8 +21,35 @@ picsv -o output.svg \
 go get github.com/high5/picsv
 ```
 
-## sample
+## Options
 
+Numeric part of the option is meant a layer.
+
+pics_*: Image specified in the comma-separated
+```
+picsv -o output.svg -pics_1 front_1.gif,front_2.gif,front_3.gif
+```
+
+o: output
+```
+picsv -o output.svg -pics_1 front_1.gif,front_2.gif,front_3.gif
+```
+
+
+begin_*: This option defines when an animation should begin (for example, write '4'  begin after 4.5 seconds).
+```
+picsv -o output.svg -pics_1 front_1.gif -begin_1 4
+```
+
+repeat_*: Repeat count.
+```
+picsv -o output.svg -pics_1 front_1.gif -repeat_1 3
+```
+
+dur_*: The duration of the animation (for example, write '5' for 5 seconds).
+```
+picsv -o output.svg -pics_1 front_1.gif -begin_1 4
+```
 
 ## License
 
