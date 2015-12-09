@@ -23,7 +23,7 @@ go get github.com/high5/picsv
 
 ## Options
 
-Numeric part of the option is meant a layer.
+Numeric part of the options is meant a layer.
 
 pics_*: Image specified in the comma-separated
 ```
@@ -34,7 +34,6 @@ o: output
 ```
 picsv -o output.svg -pics_1 front_1.gif,front_2.gif,front_3.gif
 ```
-
 
 begin_*: This option defines when an animation should begin (for example, write '4'  begin after 4.5 seconds).
 ```
@@ -50,6 +49,10 @@ dur_*: The duration of the animation (for example, write '5' for 5 seconds).
 ```
 picsv -o output.svg -pics_1 front_1.gif -begin_1 4
 ```
+
+## Thanks
+
+[droid ちゃん](http://droid-chan.net/)
 
 ## License
 
